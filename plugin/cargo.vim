@@ -14,6 +14,8 @@ com! CargoBuild call cargo#run('build')
 com! CargoRun call cargo#run('run')
 com! CargoTest call cargo#run('test')
 com! CargoBench call cargo#run('bench')
+com! CargoCheck call cargo#run('check')
+com! CargoClippy call cargo#run('clippy')
 
 func! cargo#run(cmd)
   let s:cargo_command = substitute(g:cargo_command, "{cmd}", a:cmd, 'g')
